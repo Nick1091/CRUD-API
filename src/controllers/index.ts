@@ -53,7 +53,7 @@ export const putUser = async (req: IncomingMessage, res: ServerResponse, id: str
         const newUsers = await UsersService.UpdateUser(us);
         return getRespData(res, newUsers, Codes.success200)
       } else {
-        return getRespMessage(res, messages.badRequest, Codes.client404);
+        return getRespMessage(res, messages.fieldsReqErr, Codes.client400);
       }
     } else {
       return getRespMessage(res, messages.userError, Codes.client404);

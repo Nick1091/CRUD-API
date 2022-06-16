@@ -10,7 +10,7 @@ export const server = http.createServer((req, res) => {
 
   if(url === '/api/users' && req.method === "GET") {
     return getUsers(res);
-  } else if(url && isUser && req.method === 'GET') {
+  } else if(url && isUser && req.method === "GET") {
     const id = url.split('/')[3];
     if(uuidValidateV4(id)){
       return getUser(res, id);

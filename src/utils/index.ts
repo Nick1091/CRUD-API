@@ -12,9 +12,9 @@ export const getRespDataDelete = (res: ServerResponse, code: number) => {
   return res.end();
 }
 
-export const getRespMessage = (res: ServerResponse, message: string, code: number) => {
+export const getRespMessage = (res: ServerResponse, messages: string, code: number) => {
   res.writeHead(code, {'Content-Type': 'application/json'})
-  return res.end(JSON.stringify(message))
+  return res.end(JSON.stringify({message: messages}))
 }
 
 type PortType = {

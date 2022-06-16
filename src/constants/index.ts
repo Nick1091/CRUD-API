@@ -10,7 +10,7 @@ export enum Codes {
 export const messages = {
   serverError: 'The server is not responding',
   userError: 'User Not Found',
-  userInvalidUuid: 'User id not valid',
+  userInvalidUuid: 'User id is not correct',
   badRequest: 'Bad request',
   fieldsReqErr: 'Request not valid',
   routNotFound: 'Rout Not Found'

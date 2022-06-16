@@ -1,24 +1,21 @@
 {
   "compilerOptions": {
-    "strict": true,                                      /* Enable all strict type-checking options. */
-    "lib": ["esnext", "dom", "ES5"],
+    "strict": true,                                    
+    "lib": ["esnext", "dom"],
     "module": "commonjs",
-    "target": "es2021",                              /* Specify what module code is generated. */
+    "target": "es2021",                              
     "rootDir": "./src",
     "outDir": "dist", 
     "baseUrl": "./src",
     "allowJs": true, 
     "removeComments": true,
-    "allowSyntheticDefaultImports": true,                          /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
+    "allowSyntheticDefaultImports": true,                        
     "moduleResolution": "node",
     "esModuleInterop": true,  
     "forceConsistentCasingInFileNames": true, 
-    "noImplicitAny": true,           /* Ensure that casing is correct in imports. */
+    "noImplicitAny": true,      
     "skipLibCheck": true,
     "sourceMap": false,
-    "paths" : {
-      "@src/*":["src/*"],
-    },
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true                      
   },

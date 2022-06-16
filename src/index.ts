@@ -1,9 +1,10 @@
+import 'dotenv/config';
 import * as http from 'http'
-import { getPORT, uuidValidateV4, getRespMessage } from './utils';
+import { uuidValidateV4, getRespMessage } from './utils';
 import { getUsers, getUser, createUser, putUser, deleteUser } from './controllers'
 import { Codes, messages } from './constants';
 
-const PORT = getPORT();
+const PORT = process.env.PORT || 5000;
 const server = http.createServer((req, res) => {
 
   const url = req.url ? req.url.replace(/\/*$/g, "") : undefined;

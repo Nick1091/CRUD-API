@@ -1,4 +1,3 @@
-import dotenv from 'dotenv';
 import { validate as uuidValidate } from 'uuid';
 import { version as uuidVersion } from 'uuid';
 import http, { ServerResponse } from 'http'
@@ -23,8 +22,7 @@ type PortType = {
 };
 
 export const getPORT = () => {
-  const env = dotenv.config().parsed as unknown as PortType;
-  return env ? env.PORT : 4000;
+  return process.env.PORT;
 }
 
 export const uuidValidateV4 = (uuid: string): boolean => {

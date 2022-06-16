@@ -5,14 +5,7 @@ class UsersService {
   public users: IUser[];
 
   constructor() {
-    this.users = [  
-      {
-        username:"Nick",
-        id: "232b8d03-3d51-4bcb-92ee-e4afb4b64b5c",
-        age: 30,
-        hobbies: []
-      },
-    ];
+    this.users = [];
   }
 
   async GetUsers(): Promise<IUser[]> {

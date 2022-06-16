@@ -29,7 +29,7 @@ export const uuidValidateV4 = (uuid: string): boolean => {
   return uuidValidate(uuid) && uuidVersion(uuid) === 4;
 };
 
-export const getBody = async (req: http.IncomingMessage): Promise<IUser> => {
+export const getBody = async (req: http.IncomingMessage): Promise<IUser | undefined> => {
   return new Promise((resolve, reject) => {
     try {
       let body: string = '';
@@ -37,7 +37,11 @@ export const getBody = async (req: http.IncomingMessage): Promise<IUser> => {
         body += chunk.toString();
       });
       req.on('end', () => {
-        resolve(JSON.parse(body));
+        try{
+          resolve(JSON.parse(body));
+        } catch (err) {
+          resolve(undefined)
+        }
       });
     } catch (error) {
       reject(error);

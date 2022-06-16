@@ -28,8 +28,9 @@ export const getUser = async ( res: ServerResponse, id: string) => {
 
 export const createUser = async (req: IncomingMessage, res: ServerResponse ) => {
   try {
-      const { username, age, hobbies } = await getBody(req);
-      if( typeof username === 'string' && typeof age === 'number' && Array.isArray(hobbies)){
+      const u = await getBody(req);
+      const { username, age, hobbies } = u ? u : { username: null, age: null, hobbies: null };
+      if( u && typeof username === 'string' && typeof age === 'number' && Array.isArray(hobbies)){
         const user: IUsersWithId = {username, age, hobbies }
         const newUsers = await UsersService.CreateUser(user);
         return getRespData(res, newUsers, Codes.success201)
@@ -44,14 +45,16 @@ export const createUser = async (req: IncomingMessage, res: ServerResponse ) => 
 export const putUser = async (req: IncomingMessage, res: ServerResponse, id: string) => {
   try {
     const user = await UsersService.GetUserById(id)
-    const { username, age, hobbies } = await getBody(req)
+    const u = await getBody(req);
+    const { username, age, hobbies } = u ? u : { username: null, age: null, hobbies: null };
     if(user){
-      if( typeof username === 'string' && typeof age === 'number' && Array.isArray(hobbies)){
+      if( u && typeof username === 'string' && typeof age === 'number' && Array.isArray(hobbies)){
         const us: IUser = { id, username, age, hobbies }
         const newUsers = await UsersService.UpdateUser(us);
         return getRespData(res, newUsers, Codes.success200)
-      }
+      } else {
         return getRespMessage(res, messages.badRequest, Codes.client404);
+      }
     } else {
       return getRespMessage(res, messages.userError, Codes.client404);
     }

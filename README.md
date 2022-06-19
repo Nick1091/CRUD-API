@@ -17,7 +17,7 @@
 - [x] **+10** **GET** `api/user` implemented properly
 - [x] **+10** **GET** `api/user/${userId}` implemented properly
 - [x] **+10** **POST** `api/user` implemented properly
-- [x] **+10** **PUT** `api/user/{userId}` implemented properly(all fields should be required)
+- [x] **+10** **PUT** `api/user/{userId}` implemented properly(**all fields should be required**)
 - [x] **+10** **DELETE** `api/user/${userId}` implemented properly
 - [x] **+6** Users are stored in the form described in the technical requirements
 - [x] **+6** Value of `port` on which application is running is stored in `.env` file

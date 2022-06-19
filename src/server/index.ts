@@ -10,7 +10,7 @@ export const server = http.createServer((req, res) => {
 
   if(url === '/api/users' && req.method === "GET") {
     return getUsers(res);
-  } else if(url && isUser && req.method === "GET") {
+  } else if(url && url.split('/').length === 4 && isUser && req.method === "GET") {
     const id = url.split('/')[3];
     if(uuidValidateV4(id)){
       return getUser(res, id);
@@ -19,7 +19,7 @@ export const server = http.createServer((req, res) => {
     }
   } else if(url === '/api/users' && req.method === 'POST') {
     return createUser(req, res);
-  } else if(url && isUser && req.method === 'PUT') {
+  } else if(url && url.split('/').length === 4 && isUser && req.method === 'PUT') {
     const id = url.split('/')[3];
     if(uuidValidateV4(id)){
       return putUser(req, res, id);

@@ -1,8 +1,8 @@
 # CRUD-API
 ### clone/init project
-  Git clone: https://github.com/Nick1091/CRUD-API.git
-  Select development branch
-  Npm i
+  - Git clone: https://github.com/Nick1091/CRUD-API.git
+  - Select development branch
+  - Npm i
 ### Scripts 
  - npm run start:dev -> The application is run in development mode
  - npm run start:prod -> The application is run in production mode, starts the build process with typescript and then runs the linked file

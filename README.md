@@ -1,5 +1,5 @@
 # CRUD-API
-### Clone repo
+### Clone/init project
   - Git clone: https://github.com/Nick1091/CRUD-API.git
   - Select development branch
   - Npm i

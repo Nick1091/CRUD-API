@@ -1,8 +1,15 @@
 # CRUD-API
+<<<<<<< HEAD
 ### clone/init project
   Git clone: https://github.com/Nick1091/CRUD-API.git
   Select development branch
   Npm i
+=======
+### Clone/init project
+  - Git clone: https://github.com/Nick1091/CRUD-API.git
+  - Select development branch
+  - Npm i
+>>>>>>> e4bb9b04ba10003d893b1b53d587e6146894887b
 ### Scripts 
  - npm run start:dev -> The application is run in development mode
  - npm run start:prod -> The application is run in production mode, starts the build process with typescript and then runs the linked file
@@ -31,4 +38,8 @@
 
 ## Hacker Scope
 - [x] **+30** There are tests for API (not less than **3** scenarios)
+<<<<<<< HEAD
 - [x] **+30** There is horizontal scaling for application with a **load balancer**
+=======
+- [x] **+30** There is horizontal scaling for application with a **load balancer**
+>>>>>>> e4bb9b04ba10003d893b1b53d587e6146894887b

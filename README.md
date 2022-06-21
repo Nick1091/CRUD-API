@@ -12,11 +12,11 @@
  - ```npm run test``` -> Starts running tests. 
 ### API
   > Implemented endpoints: ```api/users```
-- **GET** `api/user` - to get all users
-- **GET** `api/user/${userId}` to get all user by id
-- **POST** `api/user` to create record about user and store it in `in-memory-database`
-- **PUT** `api/user/{userId}` to update existing user(**`all fields should be required`**)
-- **DELETE** `api/user/${userId}` to delete existing user from `in-memory-database`
+- **GET** `api/users` - to get all users
+- **GET** `api/users/${userId}` to get all user by id
+- **POST** `api/users` to create record about user and store it in `in-memory-database`
+- **PUT** `api/users/{userId}` to update existing user(**`all fields should be required`**)
+- **DELETE** `api/users/${userId}` to delete existing user from `in-memory-database`
 ### User`s required fields:
 - username - user`s name (string, **required**)
 - age - user`s age (number, **required**)
